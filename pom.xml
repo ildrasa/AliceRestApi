@@ -20,27 +20,12 @@
 		</dependency>
 	</dependencies>
 
-<distributionManagement>
-   <snapshotRepository>
-      <id>nexus</id>
-      <url>http://192.168.157.128:8082/repository/maven-snapshots</url>
-   </snapshotRepository>
-</distributionManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<url>http://192.168.157.128:8080/manager/text</url>
-					<server>tomcat_debian_vm</server>
-					<username>user</username>
-					<password>user</password>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<!-- deployment to nexus is made from maven because jenkins nexus plugin doesn't work with nexus 3.x -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://192.168.157.128:8082/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>

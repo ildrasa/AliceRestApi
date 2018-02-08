@@ -19,7 +19,9 @@ node () {
 sh """ 
 cd ${WORKSPACE}/src/assembly
 # bring war in the docker context
-cp ${WORKSPACE}/target/Alice_restAPI-1.1-SNAPSHOT.war ./alice.war
+cp ${WORKSPACE}/target/Alice_restAPI-1.1-SNAPSHOT.war .
+# rename war
+mv Alice_restAPI-1.1-SNAPSHOT.war alice.war
 
 # build docker image 
 docker build -t 127.0.0.1:5000/alice:SNAPSHOT .

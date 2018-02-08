@@ -18,7 +18,7 @@ public class JsonServiceTest {
 
 	@Test
 	public void test001_getAliceVersionInJSON_shouldReturnCurrentVersion() {
-		Assert.assertEquals("1.0", _service.getAliceVersionInJSON());
+		Assert.assertEquals("1.1", _service.getAliceVersionInJSON());
 	}
 
 	@Test

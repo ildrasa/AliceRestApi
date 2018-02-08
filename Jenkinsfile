@@ -49,7 +49,7 @@ docker run -d -p 127.0.0.1:5001:8080  --name alice 127.0.0.1:5000/alice:SNAPSHOT
 			} else { 
  				bat "mvn -e compile test " 
 			} 
- 		} 
+ 		} // Shell build step
 sh """ 
 # stop container alice
 docker stop alice

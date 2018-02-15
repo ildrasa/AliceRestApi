@@ -127,6 +127,6 @@ RUN set -e \
 
 EXPOSE 8080
 
-ADD ../../target/alice.war /usr/local/tomcat/webapps/
+ADD target/alice.war /usr/local/tomcat/webapps/
 
 CMD ["catalina.sh", "run"]
